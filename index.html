@@ -3,7 +3,7 @@
   <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="css/app.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/cart-modal.css" type="text/css" media="all">
 
     <meta name="viewport" content="width=device-width">
 
@@ -32,10 +32,10 @@
           <div class="modal-header center-block">
             <ul>
               <li>Added to your cart</li>
-              <li>X</li>
+              <li data-dismiss="modal"><img src="img/Close x.png" alt="Closing X icon" /></li>
             </ul>
           </div>
-          <div class="modal-body">
+          <div class="modal-body cart-body">
             <div class="item-price-row">
               <div class="item-field">
                 <p>Name of Course</p>
@@ -79,7 +79,7 @@
               <p>2 items in cart</p>
               <p>Subtotal: $140.00</p>
             </div>
-            <div class="buttons">
+            <div class="buttons-row">
               <div class="footer-button">
                 <p>KEEP SHOPPING</p>
               </div>
