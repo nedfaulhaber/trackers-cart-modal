@@ -141,9 +141,10 @@ $sans: "museo-sans", sans-serif;
           border-right: 0;
           padding-bottom: 4%;
         }
+      }
     }
   }
-}
+
   .cost {
     display: flex;
     justify-content: center;
@@ -166,45 +167,55 @@ $sans: "museo-sans", sans-serif;
   margin-bottom: 15px;
 }
 
- .buttons-row {
+.buttons-row {
+ display: flex;
+ height: 69px;
+ width: auto;
+ justify-content: space-between;
+
+ .footer-button {
+   display: -webkit-box;
+   display: -ms-flexbox;
    display: flex;
+   -webkit-box-align: center;
+       -ms-flex-align: center;
+           align-items: center;
+   -webkit-box-pack: center;
+       -ms-flex-pack: center;
+           justify-content: center;
+   width: 300px;
    height: 69px;
-   width: auto;
-   justify-content: space-between;
+   z-index: 1;
+   border-radius: 11px;
+   background-color: $button-grey;
+   box-shadow: 1px 1px 5px rgba(68, 3, 22, 0.33);
+   @include secondary-text($sans, 700, 17px, $off-white);
+   position: relative;
 
-   .footer-button {
+   &:before {
+     content: "";
+     border-radius: 8px;
+     border: 1px solid white;
+     height: 59px;
+     width: 290px;
+     display: -webkit-box;
+     display: -ms-flexbox;
      display: flex;
-     align-items: center;
-     justify-content: center;
-     width: 300px;
-     height: 69px;
-     z-index: 1;
-     border-radius: 11px;
+     z-index: -1;
+     position: absolute;
      background-color: $button-grey;
-     box-shadow: 1px 1px 5px rgba(68, 3, 22, 0.33);
-     @include secondary-text($sans, 700, 17px, $off-white);
-
+     left: 5px;
+     top: 5px;
+   }
+   &:nth-of-type(2) {
+     background-color: $button-red;
      &:before {
-       content: "";
-       border-radius: 8px;
-       border: 1px solid white;
-       height: 59px;
-       width: 290px;
-       display: flex;
-       z-index: -1;
-       position: absolute;
-       background-color: $button-grey;
+       background-color: $button-red;
      }
+   }
+ }
 
-    p {
-      margin: 0;
-    }
-
-    &:nth-of-type(2) {
-      background-color: $button-red;
-      &:before {
-        background-color: $button-red;
-      }
-    }
+  p {
+    margin: 0;
   }
 }
