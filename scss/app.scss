@@ -39,7 +39,6 @@ $sans: "museo-sans", sans-serif;
 }
 
 
-
 *,
 *::before,
 *::after {
@@ -80,6 +79,11 @@ $sans: "museo-sans", sans-serif;
       display: inline;
       text-decoration: none;
 
+    }
+
+    img {
+      max-width: 16px;
+      max-height: 16px;
     }
   }
 }
